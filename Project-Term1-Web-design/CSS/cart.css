@@ -1,0 +1,332 @@
+@font-face {
+    font-family: 'CustomFont'; /* Name your font family */
+    src: url('../FONT/Italianno-Regular.ttf'); /* Locate the .ttf file within your directory*/
+  }
+  @keyframes slideinleft {
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+h1 {
+    font-family: 'CustomFont', sans-serif; /* Use the font family */
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: slideinleft 0.3s ease-in;
+}
+.container {
+    height: auto;
+    width: 100vw;
+    background-color: #e7e5e5;
+    color: #000000;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #000000;
+    animation: slideIn 0.6s ease-out;
+}
+.brand {
+    padding-left: 40px;
+}
+.menu {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    grid-gap: 15px;
+}
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    max-width: 50px;
+    padding: 10px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.about-chose {
+    box-sizing: border-box;
+    width: 120px;
+    text-align: center;
+    padding: 10px 0px;
+    cursor: context-menu;
+    background: none;
+    margin: auto;
+}
+
+.about-content {
+    display: block;
+    position: absolute;
+    text-align: center;
+    border-radius: 8px;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(10px); /* Start slightly below */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Add animation for smooth fade and move */
+}
+.about:hover .about-content {
+    opacity: 1; /* Make it fully visible */
+    transform: translateY(0); /* Move it to its final position */
+}
+.about-content a {
+    max-width: none;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    background-color: #AE6439;
+    display: block;
+    border: 1px solid #FFFFFF;
+}
+.about-content a:first-child {
+    border-radius: 8px 8px 0px 0px;
+}
+.about-content a:last-child {
+    border-radius: 0px 0px 8px 8px;
+}
+
+.about:hover .about-content {
+    display: block;
+}
+.about-content:hover {
+    display: block;
+}
+.head-left {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat( 3,auto);
+    grid-gap: 20px;
+}
+.head-left a {
+    max-width: 20px;
+    padding: 10px;
+}
+
+
+.chose {
+    border-bottom: 2px solid #000000;
+}
+.sign-in {
+    margin: auto;
+    margin-right: 40px;
+    padding: 10px 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: #000000;
+    border: 2px solid #FFFFFF;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.button-link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #FFFFFF;
+}
+.main {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+}
+.left-main{
+    border: 1px solid #000000;
+}
+.right-main{
+    border: 1px solid #000000;
+    padding: 20px;
+}
+.right-main h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.head-cart {
+    margin-left: 40px;
+}
+.head-cart h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.button {
+        margin: auto;
+        margin-right: 40px;
+        padding: 10px 20px;
+        border-radius: 16px;
+        cursor: pointer;
+        background-color: #AE6439;
+        border: 2px solid #FFFFFF;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.button-link-button{
+    margin-right: 40px;
+    margin-top: 30px;
+    padding: 10px 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #3ED53E;
+    color: white;
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.button-link-button1{
+    margin-right: 40px;
+    margin-top: 30px;
+    margin-left: 25px;
+    padding: 10px 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #3ED53E;
+    color: white;
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.follow {
+    margin: auto;
+}
+.follow div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 5px;
+}
+.follow p{
+    padding-top: 20px;
+}
+.contact {
+    margin: auto;
+}
+.logo {
+    width: 20px;
+    margin: auto;
+    filter: brightness(0);
+}
+.carts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates responsive grid columns */
+    grid-template-rows: repeat(3, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.cart {
+    background-color: #f9f9f9; /* Gives a soft background color */
+    padding: 20px;
+    border: 1px solid #000000; /* Border for separation */
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spreads items inside the cart */
+    min-height: 250px;
+}
+
+.cart img {
+    width: 100%;
+    border-radius: 8px; /* Rounds image corners */
+    margin-bottom: 10px;
+}
+
+.cart p {
+    text-align: center;
+    font-size: 16px;
+}
+
+.cart .option1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group {
+    display: flex; 
+    align-items: center;
+    background-color: #AE6439;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.cancel {
+    background-color: red;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 16px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.btn{
+    margin-right: 20px;
+}
+.gp1 span, .gp3 span{
+    margin-right: 19px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+.gp2 span{
+    margin-right: 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+.btn1{
+    margin-right: 14px;
+}
+.input-group button{
+    border: none;
+    background-color: #AE6439;
+    color: white;
+    border-radius: 5px;
+}
+.image-cart1{
+    height: 41%;
+    object-fit: contain;
+}
+.right-main input{
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #e7e5e5;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.button-link:hover {
+    transform: scale(1.1); /* Slightly scale the button */
+    background-color: #9c4f2d; /* Darker shade for the hover effect */
+}
+.sign-in:hover {
+    transform: scale(1.1); /* Slightly scale the button */
+    background-color: #9c4f2d; /* Darker shade for the hover effect */
+}
+.menu a:hover {
+    transform: scale(1.2); /* Slightly scale the menu item */
+    color: black;
+}
+.cancel:hover{
+    transform: scale(1.1); /* Slightly scale the button */
+    background-color: #d51b1b; /* Darker shade for the hover effect */
+}
+.button-link-button:hover, .button-link-button1:hover{
+    transform: scale(1.1); /* Slightly scale the button */
+    background-color: rgb(19, 195, 19); /* Darker shade for the hover effect */
+}
